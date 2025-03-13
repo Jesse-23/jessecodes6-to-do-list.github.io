@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    padding: 10px;
+}
+.to-do-app-list {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+h2 {
+    color: green;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+button {
+    border: none;
+    outline: none;
+    padding: 16px 58px;
+    background: green;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 20px;
+    border-radius: 50%;
+    background-image: url('https://img.icons8.com/ios/452/unchecked-checkbox.png');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before {
+    background-image: url('https://img.icons8.com/ios/452/checked-checkbox.png');
+}
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+}
+ul li span:hover {
+    background: #edeef0;
+}
+
+
+
+/* RESPONSIVENESS FOR ALL SCREEN SIZES */
+/* ALL MOBILE DEVICES */
+@media screen and (max-width: 600px) {
+    .to-do-app-list {
+        margin: 50px auto 10px;
+        padding: 20px 15px 35px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .row {
+        padding-left: 10px;
+        margin-bottom: 15px;
+    }
+    input {
+        padding: 5px;
+        font-size: 14px;
+    }
+    button {
+        padding: 8px 29px;
+        font-size: 14px;
+    }
+    ul li {
+        font-size: 16px;
+        padding: 10px 8px 10px 40px;
+    }
+    ul li::before {
+        height: 22px;
+        width: 16px;
+        top: 10px;
+        left: 5px;
+    }
+    ul li span {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+}
